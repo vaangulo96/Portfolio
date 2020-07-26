@@ -1,0 +1,51 @@
+.img_container{
+	--n: 1;
+	height:50vw;
+	width: 100%;
+	width: calc(var(--n)*100%);
+	overflow-y: hidden;
+	overflow-x: hidden;
+	z-index: 0;
+	max-height:100vh;
+	transform: translate(calc((var(--i,0)/var(--n)*-100vw)));
+}
+
+.img_container > img {
+	  min-width: 100%;
+	  width: 100%;
+	  width: calc(100vw/var(--n));
+	  left:0vw;
+	  position:absolute;
+	  overflow-y:hidden;
+	  opacity:65%;
+}
+
+.smooth {
+	transition: transform .5s ease-out;
+}
+
+.ani_slide1{
+	animation: slideA 15s ease-in-out 2.5s alternate infinite;
+}
+
+.ani_slide2{
+	animation: slideB 15s ease-in-out 2.5s alternate infinite;
+}
+
+@keyframes slideA{
+        0% {opacity:100%}
+	100% {left:0%;}
+}
+
+@keyframes slideB{
+	0% {opacity:0%}
+	100% {opacity:100%;}
+}
+
+
+
+/*
+
+.App-header::after{                               content: "";
+        background-image: url("https://drive.google.com/thumbnail?id=12lMh_MQn8ND6e4h4kokeGUAB59jVRBm0");                             background-size: cover;                   opacity:0.5;                              top:0;                                    left:-95vw;                               bottom:0;                                 right:0;                                  position: absolute;                       z-index: 1;                               animation: slide 10s alternate;           animation-delay: 2s;                      animation-iteration-count: infinite;
+}*/

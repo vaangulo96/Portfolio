@@ -1,0 +1,16 @@
+._selfie_frame{
+        margin-bottom: -12.5vh;
+        z-index:3;
+}                                                                         ._selfie{
+        background-image: url("https://drive.google.com/thumbnail?id=11lCf
+dmSbhMTdQhf7XKnV87TS8fPDqUES");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin:-23%;
+}
+
+.detailBar{
+	background-color:white;
+	height:5vh;
+	width:100vw;
+}

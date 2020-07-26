@@ -1,0 +1,41 @@
+/* module for quick colorfill swaps in shapes 
+ * KEY:
+ * bk = black	w = white
+ * b = blue	r = red
+ * y = yellow	
+ * p = purple	o = orange
+ * g = green	gr = greyi
+ *
+ */
+
+
+.__w{
+	background-color: #ffffff;
+}
+
+.__bk{
+	background-color: #000000;
+}
+
+.__gr{
+	background-color: grey;
+}
+
+/*THEMES*/
+/*
+ * lb = light blue 
+ * mb = mint blue
+ * hl = highlight
+ */
+
+.__lb__hl{
+	background-color:#91ffff;
+}
+
+.__mint_blue{
+	background-color: #28ebda;
+}
+
+
+
+/*PRIMARY*/

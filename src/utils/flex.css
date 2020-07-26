@@ -1,0 +1,50 @@
+/*module for adding flex properties
+ * key:
+ * flx_c = flex container
+ * flx_i = flex item
+ * __r = row	__c = column
+ * __w = wrap	__nw = no wrap
+ * __jc_start = justify content to start
+ * __jc_end = justify contemt to end q
+ * */
+
+
+
+
+.flx_c__r__nw{
+	display:flex;
+	flex-flow:row nowrap;
+}
+
+.flx_c__r{
+	display:flex;
+	flex-flow:row wrap;
+}
+
+.__jc_start{
+	justify-content: flex-start;
+}
+
+.__y_between{
+	justify-content:space-between;
+}
+
+.flx_c__c__nw{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content: flex-end;
+}
+
+.flx_col{
+	display:flex;
+	flex-flow: column nowrap;
+}
+
+.__center{
+	justify-content: center;
+	align-items:center;
+}
+
+.__center>div{
+	text-align:center;
+}

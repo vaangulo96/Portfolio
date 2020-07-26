@@ -1,0 +1,27 @@
+._tab{
+	height:30%;
+	width:60%;
+	background-color: black;
+	color: orange;
+	border-bottom:1px solid #91ffff;
+	align-items:center;
+}
+
+.menu_items{
+	height:75vh;
+}
+
+._tab>a:link,._tab>a:visited{
+	color:orange;
+	text-decoration:none;
+}
+
+._tab>a:hover{
+	background-color:white;
+	opacity:50%;
+}
+
+.tab>a:active{
+	text-decoration:underline;
+}
+

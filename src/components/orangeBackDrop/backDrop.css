@@ -1,0 +1,139 @@
+/***
+ * basecolor is the base of this component (orange)
+ * baseGrey is the base of the overall theme (charcoal Grey)
+ ***/
+
+
+.gallery{
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
+	grid-auto-flow:column;
+	grid-template-areas:
+		". . tr"
+		"ml c mr"
+		"bl bc br";
+	justify-items:stretch;
+	overflow: hidden;
+	height: 38vh;
+	--baseColor: orange;
+	z-index: 1;
+	background-color: var(--baseGrey);
+	position:relative;
+	top:-10vh;
+}
+
+.tile{
+	background-color:var(--baseColor);
+	height:20vh;
+	width:20vh;
+	position:relative;
+	border: 1px solid var(--baseColor);
+
+}
+
+.title{
+	grid-area: c;
+	position:relative;
+	left:0vh;
+	z-index:2;
+	color: var(--baseColor);
+	font-size:7vh;
+	left:-1vh;
+	top:-3vh;
+	transform:rotate(-20deg);
+}
+
+.title>span{
+	color:var(--baseGrey);
+}
+
+.topRight{
+	transform:rotate(-30deg);
+	grid-area: tr;
+	left: 2vh;
+	border-top-left-radius: 23%;
+}
+
+.midLeft{
+	grid-area: ml;
+	top: 11vh;
+	left: 2vh;
+	border-top-left-radius: 37%;
+}
+
+.midRight{
+	transform:rotate(30deg);
+	grid-area: mr;
+	top: -3vh;
+	left: 2vh;
+
+}
+
+.botLeft{
+	transform:rotate(-30deg);
+	grid-area:bl;
+	top: -22vh;
+	left: 17vh;
+	border-top-right-radius: 75%;
+	border-top-left-radius: 30%;
+}
+
+.botCenter{
+	grid-area:bc;
+	top: -15vh;
+	left: 12vh;
+	width: 30vh;
+}
+
+.botRight{
+	grid-area: br;
+	top:0vh;
+	left:0vh;
+}
+
+@media screen and (min-width:750px){
+
+	.title{
+		top:-4vh;
+		left:-6vw;
+		font-size:9vh;
+		margin:0px;
+	}
+	.topRight{
+		height:10vh;
+		width:10vh;
+		top: 2vh;
+		border-radius: 45% 45% 0% 0%;
+	}
+
+	.midRight{
+		height:15vh;
+		width:30vh;
+		top:-4vh;
+		left:4vh;
+		transform:rotate(0deg);
+		border-radius: 60% 0% 69% 30%;
+	}
+
+	.botCenter{
+		width:33vh;
+		height:30vh;
+		top:-22vh;
+		left:-11vh;
+		transform: rotate(38deg);
+		border-radius: 30% 0% 70% 30%;
+	}
+
+
+	.midLeft{
+		top:20vh;
+		border-radius: 37% 0%;
+	}
+
+	.botLeft{
+		top:-10vh;
+		border-radius: 30% 75% 27% 68%;
+		left:
+	}
+}

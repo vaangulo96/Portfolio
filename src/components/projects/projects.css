@@ -1,0 +1,8 @@
+.base{
+        width: 100vw;
+        height:85vh;
+        z-index: 2;
+}
+
+.slide_cont{                                                                      width:100vw;                                                              height:75vh;                                                              z-index: 2;
+}

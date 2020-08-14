@@ -1,0 +1,51 @@
+
+.menu{
+	left: -25vw;
+	top:3vh;
+}
+.corner{
+	margin-left:-5vw;
+	left:0;
+	top:0;
+	border: 0.5vmin solid #ff36b2;
+	border-radius:20%;
+}
+
+.menu,.corner{
+	position:fixed;
+}
+
+.__rot45{                                           transform: rotate(45deg);          }
+
+.body{
+	opacity:0.5;
+}
+
+.buttonSlideOut{
+	animation:2s ease-out buttonSlide;
+}
+
+.bodySlideOut{
+	animation:2s ease-out bodySlide;
+}
+
+.buttonSlideIn{
+	animation:2s ease-in reverse buttonSlide;
+}
+
+.bodySlideIn{
+	animation:2s ease-in reverse bodySlide;
+}
+
+@keyframes buttonSlide{
+	from{left:0vw;}
+	to{left:25vw;}
+}
+
+@keyframes bodySlide{
+	from {left:-15vw;}
+	to {left: 2.5vw;}
+}
+
+
+

@@ -1,24 +1,22 @@
 import React from 'react';
 import '../../utils/shapes.css';
 import '../../utils/flex.css';
-import '../../utils/colors.css';
 import './app.css';
-import ResponsiveMenu from './responsive-menu';
-import ProfilePic from '../profilePic/profilePic';
+import ResponsiveMenu from '../menu/responsive-menu';
 import Projects from '../projects/projects';
-import BackDrop from '../orangeBackDrop/backDrop';
 import Resume from '../resume/resume';
 import classNames from 'classnames';
 import flower from '../../images/flowerMicro.jpg';
+import BackDrop from '../orangeBackDrop/backDrop';
 
 function App() {
+
   return (
     <div className="App">
       <ResponsiveMenu id={'top'}/>
-      <header className="App-header">
+      <div className = "App-header">
 	<BackDrop />
-        <ProfilePic />
-      </header>
+      </div>
       <button className = {classNames('upArrow','backUp','__lb__hl')}>
 	  <a className = {classNames('arrowLink')} href='#top'>•</a>
       </button>

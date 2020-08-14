@@ -5,6 +5,7 @@ import './resume.css';
 import reactLogo from '../../images/logo.svg';
 import css3Logo from '../../images/css3Logo.svg';
 import html5Logo from '../../images/html5Logo.svg';
+import js6Logo from '../../images/js6Logo.svg';
 
 function Resume(){
 	const [skillNumber,setSkill] = useState(0);
@@ -21,29 +22,35 @@ function Resume(){
 	}
 	
 	useEffect(() => {
-		document.getElementById('skillDown').onpointerdown = handleDownButton;
-		document.getElementById('skillUp').onpointerdown = handleUpButton});
+		let down = document.getElementById('skillDown');
+		let up = document.getElementById('skillUp');
+		down.addEventListener('pointerdown',handleDownButton);
+		up.addEventListener('pointerup',handleUpButton);
+	return ()=>{
+		down.removeEventListener('pointerdown',handleDownButton);                                                             up.removeEventListener('pointerup',handleUpButton);
+	}
+	});
 
 	return(
 		<div className = {cn("resume -grid")}>
 			<div className = {cn("skillsBox -smallPortrait")}>
 				<div className = {cn("text")}
 				     id = {'skillUp'}>
-				Up</div>
+				^</div>
 				    <div className = {cn("slider")}>
 					<div className = {cn("square")}><img src={reactLogo} className={cn("reactLogo")}  alt="react logo" /></div>
 					<div className = {cn("square")}><img src={html5Logo} className = {"html5Logo"} alt='html5 logo' /></div>
 					<div className = {cn("square")}><img src={css3Logo} className = {"css3Logo"} alt='css3 logo' /></div>
-					<div className = {cn("square")}>4</div>
+					<div className = {cn("square")}><img src={js6Logo} className = {"js6Logo"} alt='js6 logo'  /></div>
 				    </div>
 				<div className = {cn("text")}
 				     id = {'skillDown'}>
-				down</div>
+				v</div>
 				
 			</div>
 			<div  className = {cn("dialogBox -mediumPortrai")}>
 			    <div className = {cn("dialogBackground")}>
-				<ul className = {cn("text")}>
+				<ul className = {cn("resumeText")}>
 					<li>Direction</li>
 					<li>Stragety</li>
 					<li>Tech skill detail</li>

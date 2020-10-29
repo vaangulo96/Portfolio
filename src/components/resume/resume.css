@@ -105,9 +105,13 @@
 
 .slider{
 	height:75%;
-	width:90%;             
+	width:100%;             
 	overflow-y:hidden;                           
-	scroll-snap-type:x mandatory;                     
+	scroll-snap-type:x mandatory;
+	display: flex;
+	flex-flow:column;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .square{
@@ -122,6 +126,11 @@
 	flex-flow:column nowrap;
 	justify-content:center;
 	align-items:center;
+	margin:10px;
+}
+
+.filler{
+	background-color:var(--hiliBlue);
 }
 
 .text:hover{
@@ -133,7 +142,11 @@
 }
 
 
-@media screen and (max-width:900px){ 
+@media screen and (max-width:800px){ 
+
+	.square{
+		transform:rotate(-90deg);
+	}
 
 	.reactLogo{
 		height:80%;
@@ -154,6 +167,13 @@
 		height:50%;
 		width:80%
 	}
+	.filler{                                          
+		grid-area: experience;
+		position:relative;
+		top:63vh;
+		width:100vw;
+		height:25vh;
+	}
 }
 
 
@@ -168,7 +188,7 @@
   to {                                                                        transform: rotate(360deg);                                              }
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width:800px){
 	.skillsBox{
 		transform:rotate(0deg);
 		grid-area:left;
@@ -178,6 +198,7 @@
 		top:10vh;
 		left: 4vw;
 	}
+
 
 	.slider{
 		height:90%;                               
@@ -219,5 +240,11 @@
 
 	.js6Logo{
 		height:65%;
+	}
+
+	.filler{
+		height:0;
+		width:0;
+		visibility:hidden;
 	}
 }

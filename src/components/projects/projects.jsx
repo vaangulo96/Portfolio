@@ -6,9 +6,12 @@ import '../../utils/flex.css';
 import SlideShow from  '../slideShow/slideShow';
 function Projects(){
 	return(
-	     <div className = {cn("base","__w","flx_c__r__nw","__center")}>
-		 <div className = {cn("__gr","slide_cont","flx_c__r","__y_between")}>
+	     <div className = {cn("base","flx_c__r__nw","__center")}>
+		 <div className = {cn("slide_cont")}>
 		   <SlideShow />
+		   <div className = {cn("next-projects")}>
+		     <h1>coming soon</h1>
+		   </div>
 		 </div>
 	    </div>
 	);

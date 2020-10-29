@@ -55,21 +55,23 @@
 
 
 .flower{
-	height:20vh;
-	width:20vh;
+	height:40vh;
+	width:40vh;
 	border: 1px solid pink;
+	border-radius: 40% 0%;
 	z-index:3;
 }
 
 .flowerFrame{
-	height:35vh;
-	width:35vh;
+	height:45vh;
+	width:45vh;
 	display:flex;
 	flex-flow: column nowrap;
 	justify-content:center;
 	align-items:center;
 	background-color:var(--baseGrey);
 	border: 2px solid pink;
+	border-radius: 0% 60%;
 	z-index:3;
 
 }
@@ -96,18 +98,6 @@
 	width:25%;
 	background-color:var(--baseGrey);
 	z-index:2;
-}
-
-.flowerBackground{
-	height:100%;
-	width:100%;
-	display:flex;
-	flex-flow: row nowrap;
-	justify-content:center;
-	align-items:center;
-	background-color:black;
-	border:1px solid pink;
-	z-index:0;
 }
 
 

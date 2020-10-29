@@ -1,0 +1,28 @@
+.flowerBackground{                                                 height:66%;                                                width:100vw;                                               display:flex;                                              flex-flow: row nowrap;
+        justify-content:center;                                    align-items:center;                                        background-color:black;                                    border:1px solid pink;                                     z-index:0;
+}
+
+.flowerFrame{                                                      height:45vh;                                               width:45vh;                                                display:flex;                                              flex-flow: column nowrap;                                  justify-content:center;                                    align-items:center;                                        background-color:var(--baseGrey);                          border: 2px solid pink;                                    border-radius: 0% 60%;                                     z-index:3;                                                                                                    }
+
+.flower{                                                           height:40vh;                                               width:40vh;                                                border: 1px solid pink;                                    border-radius: 40% 0%;                                     z-index:3;                                         }
+
+.wrapFrameBackground{
+
+}
+
+.frameBackground{
+        height:80%;
+        width:50%;
+        background-color:grey;
+        z-index:1;
+        display:flex;
+        flex-flow:column nowrap;
+        justify-content:center;
+        align-items:center;
+        z-index:2;
+
+}
+                                                           .frameBackgroundSquare{                                            height:25%;                                                width:25%;
+        background-color:var(--baseGrey);
+        z-index:2;
+}

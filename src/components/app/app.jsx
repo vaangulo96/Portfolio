@@ -6,8 +6,8 @@ import ResponsiveMenu from '../menu/responsive-menu';
 import Projects from '../projects/projects';
 import Resume from '../resume/resume';
 import classNames from 'classnames';
-import flower from '../../images/flowerMicro.jpg';
 import BackDrop from '../orangeBackDrop/backDrop';
+import ImgDemo from '../rImage-demo/img-demo';
 
 function App() {
 
@@ -26,22 +26,9 @@ function App() {
       <section id = {'projects'}>	  
 	<Projects />
       </section>
-      <div className = {'flowerBackground'}>
-	  <div className = {classNames('flowerFrame flx_col __center')}>
-            <img src = {flower} className = "flower"  alt="micro surrealistic flower"/></div>
-	  <div className = {'wrapFrameBackground'}>
-		<div className = {'frameBackground'}>
-	    	    <div className = {'frameBackgroundSquare'}></div>
-		</div>
-		<div className ={'frameBackground'}>
-	   	     <div className = {'frameBackgroundSquare'}></div>
-		</div>
-      	  </div>
-      </div>
+      <ImgDemo />
       <footer id={'bottom'}>
-	  <p>contact
-		hire me
-	  	yada yada
+	  <p>powered by netlify
 	  </p>
       </footer>
     </div>

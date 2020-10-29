@@ -18,8 +18,7 @@
 .img_container > img {
 	  min-width: 100%;
 	  width: 100%;
-	  width: 100%;
-	  left:0vw;
+	  /*left:0vw*/
 	  position:absolute;
 }
 
@@ -47,6 +46,7 @@
 
 @media screen and (min-width:900px){
 	.img_container{
-		top:20vh;
+		top:83vh;
+		position:absolute;
 	}
 }

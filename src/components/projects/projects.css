@@ -2,7 +2,48 @@
         width: 100vw;
         height:85vh;
         z-index: 2;
+	position: relative;
+	top: 10vh;
+	background-color:black;
 }
 
-.slide_cont{                                                                      width:100vw;                                                              height:75vh;                                                              z-index: 2;
+.slide_cont{                                             
+	width:100vw;                      
+	height:75vh;                                      
+	z-index: 2;
+	display: flex;
+	flex-flow:column nowrap;
+	align-items:center;
+	justify-content: center;
+	background-color: #f09b46;
+}
+
+.next-projects{
+	background-color:#74e8c3;
+	width:50%;
+	height:55%;
+	position:relative;
+	border: 1px solid pink;/*fix*/
+	border-radius: 10%;
+
+}
+
+@media screen and (min-width:800px){
+	.base{
+		height:125vh;
+		top: -11vh;
+	}
+
+	.slide_cont{
+		height:80vh;
+	}
+
+	.next-projects{
+		top:-21vh;
+		height:75vh;
+		width:80%;
+	}
+
+
+
 }

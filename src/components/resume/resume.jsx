@@ -33,6 +33,7 @@ function Resume(){
 
 	return(
 		<div className = {cn("resume -grid")}>
+			<div className = {"filler"}></div>
 			<div className = {cn("skillsBox -smallPortrait")}>
 				<div className = {cn("text")}
 				     id = {'skillUp'}>

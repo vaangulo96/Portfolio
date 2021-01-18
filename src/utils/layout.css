@@ -1,10 +1,13 @@
 
+/*ATTRIBUTES*/
 
 .-grid{
 	display:grid;
 	grid-template-columns:repeat(var(--colCount),1fr);
 	grid-template-rows:repeat(var(--rowCount),1fr);
 }
+
+-----------------------------------------------------------
 
 /*SIZES*/
 

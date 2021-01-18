@@ -18,13 +18,12 @@
   },
   "eslintConfig": {
     "extends": "react-app",
-    "parserOptions":{
-	    "ecmaVersion":2018,
-	    "ecmaFeatures":{
-		    "jsx":true
-	    }
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "ecmaFeatures": {
+        "jsx": true
+      }
     }
-
   },
   "browserslist": {
     "production": [

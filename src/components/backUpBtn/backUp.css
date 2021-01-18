@@ -1,0 +1,45 @@
+.backUp{
+	height:10vh;
+	width:10vh;
+	border: 0.5vh solid #91ffff;
+	border-radius: 50%;
+	top:70vh;
+	position:fixed;
+	z-index:5;
+}
+
+.upArrow{
+	background-image: url(../../images/upArrow.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.arrowLink{
+	text-decoration:none;
+	color: #91ffff;
+	font-size: 10vh;
+}
+
+.hidden{
+	left:95vw;
+}
+
+.slide-in{
+	-webkit-animation: 3s ease-in slide-in;
+	animation: 3s ease-in slide-in;
+}
+
+.slide-out{
+	-webkit-animation: 3s ease-out slide-out;
+	animation: 3s ease-out slide-out;
+}
+
+@keyframes slide-out {
+	from {left:95vw} 
+	to {left:85vw}
+}
+
+@keyframes slide-in{
+	from {left: 85vw}
+	to {left: 95vw}
+}

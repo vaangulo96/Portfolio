@@ -1,25 +1,53 @@
-import React from 'react';
-import '../../utils/shapes.css';
-import '../../utils/flex.css';
+import React,{useEffect} from 'react';
 import './app.css';
-import ResponsiveMenu from '../menu/responsive-menu';
 import Projects from '../projects/projects';
 import Resume from '../resume/resume';
-import classNames from 'classnames';
 import BackDrop from '../orangeBackDrop/backDrop';
 import ImgDemo from '../rImage-demo/img-demo';
+import BackUp from '../backUpBtn/backUp';
+import LandingPage from '../landingP/landing';
+import {animate} from '../tools/helpers.js';
 
 function App() {
+	  let getVeil = ()=> document.getElementsByClassName('veil')[0];
+	  let getApp = ()=> document.getElementsByClassName('App')[0];
+
+  useEffect(()=>{
+	  let veil = getVeil();
+	  let app = getApp();
+	  const slideUp = (el,timeF)=> el.style.top = 0 - (timeF*110) + 'vh';
+
+	  animate({
+		  els:[veil,app],
+		  draw:slideUp,
+		  duration:2000,
+	  });
+  },[]);
+
+  useEffect(()=>{
+	  let app = getApp();
+	  const slideDown = (el,timeF)=> el.style.top = -120+(timeF*65) + 'vh'; 
+	 
+	  let timeId = setTimeout(animate({
+		  els:[app],
+		  draw:slideDown,
+		  duration:1000,
+	  }),4000);
+	
+	  return clearTimeout(timeId);
+
+	},[]);
 
   return (
-    <div className="App">
-      <ResponsiveMenu id={'top'}/>
+  <div>
+    <div className = "veil">
+     <LandingPage />q
+    </div>
+    <div className = "App">
       <div className = "App-header">
 	<BackDrop />
       </div>
-      <button className = {classNames('upArrow','backUp','__lb__hl')}>
-	  <a className = {classNames('arrowLink')} href='#top'>•</a>
-      </button>
+      <BackUp />
       <section id={'resume'}>
         <Resume />
       </section>
@@ -28,10 +56,11 @@ function App() {
       </section>
       <ImgDemo />
       <footer id={'bottom'}>
-	  <p>powered by netlify
-	  </p>
+	  <h3>powered by netlify
+	  </h3>
       </footer>
     </div>
+  </div>
   );
 }
 

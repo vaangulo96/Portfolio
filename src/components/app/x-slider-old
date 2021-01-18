@@ -1,0 +1,73 @@
+/* this module is for adding properties to an element of a x-axis touch(mobile) slide
+ * v1*/
+
+import React, {Component} from 'react';
+import './x-slider.css'
+import '../../utils/shapes.css'
+import classNames from 'classnames';
+import Menu from './menu';
+import {downHandler} from '../../utils/helpers.js';
+
+class Xslider extends Component {
+	
+	constructor(props){
+	super(props);
+	this.state = ({
+		left: 0,
+		isExtended:false
+	});
+	this.dragElementRef = React.createRef();
+	}
+
+/*
+	handleTouchMove(e) {
+		console.log('touch started');
+		var touchLocation = e.targetTouches[0].pageX;
+		if (touchLocation < (0.45*600)){
+		/*600 is magic number
+		this.setState({
+			left:touchLocation/6});/*600 is magic # replace with generic viewport variable
+		}
+	}
+*/
+	componentDidMount(){
+		document.getElementById("menuButton").addEventListener("pointerdown",downHandler(this),false);
+	}
+
+
+	render(){
+	    return(
+	      <div >
+		<div 
+		  className = {classNames("menu", "body","maxXm_rect","__gr")}
+		    /*
+		  style = {{left:this.state.left-(1064*.035)+'vh'}}/*1064 magic #
+		    */
+		>
+		    <Menu />
+		</div>
+
+		<button
+		  id = "menuButton"
+		  className = {classNames("menu", "corner","_sq__15","__rot45","__lb__hl")}
+		    /*
+		  style = {{left: this.state.left+'vh'}}
+		  */
+		  ref = {this.dragElementRef}
+		>
+		</button>
+	      </div>
+	    );
+	}
+		 
+}
+
+export default Xslider;
+
+	
+
+
+
+
+
+

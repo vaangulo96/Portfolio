@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-import {unify} from '../../utils/helpers.js';
+import {unify} from '../tools/helpers.js';
 import "../../utils/flex.css";
 import "../../utils/shapes.css";
 import "./slideShow.css";

@@ -6,9 +6,12 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "cra-template": "1.0.3",
+    "ini": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-hook-form": "^6.15.1",
+    "react-scripts": "3.4.1",
+    "serialize-javascript": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

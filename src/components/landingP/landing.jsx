@@ -1,4 +1,4 @@
-import React ,{useEffect,useContext} from 'react';
+import React ,{useContext} from 'react';
 import *  as cn from 'classnames';
 import './landing.css';
 import '../../utils/layout.css'; 
@@ -11,15 +11,16 @@ function LandingPage (){
 
 	return(
 	    <div className = "rootWrap">
-		<img src = {waterfront} 
+		<div className = {cn('background -grid')}>
+		   <div className = {cn('foreground')}></div>
+		   <img src = {waterfront} 
 		       alt = 'waterfront sunset'
 		       id = 'waterfront'
-		/>
-		<div className = {cn('background -grid')}>
-		  <button className = {cn('contact-me _c2a')}>contact me!</button>
+		   />
+		  <button className = {cn('contact-me _c2a')}
+			  onClick = {api.go2contact}>contact me!</button>
 		  <button className = {cn('my-stuff _c2a')}
-		onClick = {api.go2stuff}>look at my stuff!</button> 
-		  <div className = {cn('foreground')}></div>
+			  onClick = {api.go2stuff}>look at my stuff!</button> 
 		</div>
 	    </div>
 	);

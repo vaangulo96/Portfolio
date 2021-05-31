@@ -31,6 +31,21 @@
 	z-index:5;
 }
 
+.backdrop{
+	position:relative;
+	top:-10vh;
+	right:-15vw;
+}
+
+
+.sunset-pic{
+	position:relative;
+	top:20vh;
+}
+
+a>h3{
+	color:#00f7b3;
+}
 
 
 

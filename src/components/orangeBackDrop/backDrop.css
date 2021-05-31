@@ -33,10 +33,10 @@
 
 
 /*think ab dping a grey bottom border instead of this div */
-.grey-tile{
-	background-color:var(--baseGrey);
+.bottom-tile{
+	background-color:var(--baseColor);
 	height:2vh;
-	width:110vw;
+	width:90vw;
 	grid-area:bc;
 	z-index:2;
 	position:relative;

@@ -1,0 +1,39 @@
+
+
+
+.cardBg{
+	background-color:var(--baseGrey);
+	height:80vh;
+	width:90vw;
+}
+
+.cardText{
+	height:50vh;
+	width:60vh;
+	color:white;
+	font-size: 3em;
+}
+
+.-hidden{
+	left:100vw;
+	opacity:0%;
+}
+
+.-paused{
+	animation: paused slideout;
+}
+
+.-running{
+	animation:2s ease-out 1 running slideout;
+}
+
+@keyframes slideout{
+	from {
+		left:100vw;
+		opacity:0%;
+	}
+	to {
+		left:0vw;
+		opacity:100%;
+	}
+}

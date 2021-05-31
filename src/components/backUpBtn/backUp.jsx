@@ -1,37 +1,47 @@
 import React,{useEffect,useState} from 'react';
 import throttle from '../tools/throttle.js';
-import colors from '../../utils/colors.css';
 import './backUp.css';
 import * as cn from 'classnames';
 
 
 export default function  BackUp (){
-	//const [pos, setPos] = useState();
-	const [isFresh, setBool] = useState(true);
-	
+	const [lastPos, setPos] = useState(0);
+	const [isHidden,setHidden] = useState(true);
+	const [lastScroll, setScroll] = useState(0);
+
+	const debounce = (func,e) =>{
+		let pos = window.scrollY;
+		let deltY = pos - lastPos;
+		if ((lastScroll > 0 && deltY < 0) || (lastScroll < 0 && deltY > 0)){
+			return func;
+		}else{
+			return ()=>{};
+		}
+	}
 	const handleScroll = (e) => {
-		let lastPos = window.scrollY;
+		let pos = window.scrollY;
 		let Btn = document.getElementsByClassName('backUp')[0];
-		if ((window.scrollY - lastPos)>0 && !isFresh){
+		let deltY = pos - lastPos;
+		if((lastScroll >= 0 && deltY <= 0) || (lastScroll <= 0 && deltY >= 0)){
+		   if (Math.abs(deltY)>150 && deltY>0 && !isHidden){
 			//slide in//
 			Btn.classList.replace('slide-out','slide-in');
-		}else if ((window.scrollY- lastPos)<0){
+			Btn.classList.replace('out','hidden');
+			setHidden(true);
+		   }else if (Math.abs(deltY)>150 && deltY<0 && isHidden){
 			//slide out//
-			let replaced = '';
-			if(!isFresh){
-				replaced = 'slide-in';
-			}else if(isFresh){
-				replaced = 'hidden';
-				setBool(false);
-			}
-			Btn.classList.replace(replaced,'slide-out');
+			Btn.classList.contains('slide-in')?Btn.classList.replace('slide-in','slide-out'):Btn.classList.add('slide-out');
+			Btn.classList.replace('hidden','out');
+			setHidden(false)
+		   }
 		}
-		lastPos = window.scrollY;
+		setScroll(deltY);
+		setPos(pos);
 	}
 
 	useEffect(()=>{
-		window.addEventListener("scroll",handleScroll)
-	});
+		window.addEventListener("scroll",handleScroll);
+	},[lastPos]);
 
 	return(
 		<button className = {cn('upArrow','backUp','__lb__hl','hidden')}>

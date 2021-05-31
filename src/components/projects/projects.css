@@ -18,6 +18,14 @@
 	background-color: #f09b46;
 }
 
+.bridge-pic{
+	height:40vh;
+	width:100vw;
+	background-image: url("../../images/tillamookBridge.jpg");
+	background-size: contain; 
+
+}
+
 .next-projects{
 	background-color:#74e8c3;
 	width:50%;
@@ -26,6 +34,85 @@
 	border: 1px solid pink;/*fix*/
 	border-radius: 10%;
 
+}
+
+.slider{
+	height:75%;
+	width: 80%;
+	border:2px solid #142b5f;
+	border-radius:10%;
+	background-color: #74e8c3;
+}
+
+.style-guide{
+	height:90%;
+	width:100%;
+	display:flex;
+	flex-flow: column nowrap;
+}
+
+.color-key{
+	height:75%;
+	width:100%;
+	list-style-type:none;
+	display:flex;
+	flex-flow:column nowrap;
+	overflow-y:scroll;
+}
+	
+
+.-color{
+	grid-template-areas: "left rigt";
+	--colCount: 2;
+	--rowCount:1;
+	height:50%
+}
+
+.-color>div{
+	height:10vh;
+	width:10vh;
+	border-radius:50%;
+	grid-area:"left";
+}
+
+.-color>p{
+	grid-area:"right";
+}
+
+
+.backg{
+	background-color: #142b5f;
+	border: 1px solid #142b5f;
+}
+
+.main{
+	background-color: #f19ec4;                            
+	border: 1px solid #f19ec4;
+}
+
+.coolAccent{
+	background-color:#00f7b3;
+	border:1px solid #00f7b3;
+}
+
+.warmAccent{
+	background-color: #f09b46;                            
+	border: 1px solid #f09b46;
+}
+
+.coolTertiary{
+	background-color: #800080;                            
+	border: 1px solid #800080;
+}
+
+.warmTertiary{
+	background-color: #70034e;                            
+	border: 1px solid #70034e;
+}
+
+.neutral{
+	background-color: #282c34;                                       
+	border: 1px solid #282c34;
 }
 
 @media screen and (min-width:800px){

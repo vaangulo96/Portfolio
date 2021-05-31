@@ -18,7 +18,7 @@ function BackDrop(){
                         <div className = {cn("midRight","tile")}></div>
                         <div className = {cn("botLeft","tile")}></div>
                         <div className = {cn("botCenter","tile")}></div>
-			<div className = {cn("grey-tile")}></div>
+			<div className = {cn("bottom-tile")}></div>
                    </div>
 	);
 }

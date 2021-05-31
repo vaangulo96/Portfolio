@@ -4,6 +4,7 @@
 	border: 0.5vh solid #91ffff;
 	border-radius: 50%;
 	top:70vh;
+	left:95vw;
 	position:fixed;
 	z-index:5;
 }
@@ -21,7 +22,11 @@
 }
 
 .hidden{
-	left:95vw;
+	left:100vw;
+}
+
+.out{
+	left:80vw;
 }
 
 .slide-in{
@@ -35,11 +40,16 @@
 }
 
 @keyframes slide-out {
-	from {left:95vw} 
-	to {left:85vw}
+	from {left:100vw;
+	      opacity:0%} 
+
+	to {left:80vw;
+	    opacity:100%}
 }
 
 @keyframes slide-in{
-	from {left: 85vw}
-	to {left: 95vw}
+	from {left: 80vw;
+	      opacity:100%}
+	to {left: 100vw;
+	    opacity: 0%}
 }

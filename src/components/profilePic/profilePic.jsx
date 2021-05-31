@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../utils/flex.css';
 import './profilePic.css';
 import * as cn from 'classnames';
 

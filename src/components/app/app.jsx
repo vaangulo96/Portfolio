@@ -6,7 +6,9 @@ import BackDrop from '../orangeBackDrop/backDrop';
 import ImgDemo from '../rImage-demo/img-demo';
 import BackUp from '../backUpBtn/backUp';
 import LandingPage from '../landingP/landing';
+import ResImg from '../resImg/img';
 import {animate} from '../tools/helpers.js';
+import sunset from '../../images/sunset.jpg';
 
 function App() {
 	  let getVeil = ()=> document.getElementsByClassName('veil')[0];
@@ -41,11 +43,16 @@ function App() {
   return (
   <div>
     <div className = "veil">
-     <LandingPage />q
+     <LandingPage />
     </div>
     <div className = "App">
       <div className = "App-header">
-	<BackDrop />
+	<div className = "backdrop">
+	   <BackDrop />
+	</div>
+        <div className = "sunset-pic">
+	  <ResImg name="sunset" path={sunset} altText="cali sunset"/>
+	</div>
       </div>
       <BackUp />
       <section id={'resume'}>
@@ -56,10 +63,10 @@ function App() {
       </section>
       <ImgDemo />
       <footer id={'bottom'}>
-	  <h3>powered by netlify
-	  </h3>
+	  <a href= "https://www.netlify.com/"><h3>powered by netlify
+	  </h3></a>
       </footer>
-    </div>
+     </div>
   </div>
   );
 }

@@ -44,7 +44,7 @@
   "devDependencies": {
     "browserlist": "^1.0.1",
     "immer": "^9.0.2",
-    "postcss": "^7.0.0",
+    "postcss": "^8.2.10",
     "react-scripts": "^3.4.1"
   },
   "resolutions": {

@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import * as cn from 'classnames';
 import '../../utils/layout.css';
-import './res.css';
+import './resume.css';
 import reactLogo from '../../images/logo.svg';
 import css3Logo from '../../images/css3Logo.svg';
 import html5Logo from '../../images/html5Logo.svg';
@@ -105,7 +105,7 @@ function Resume(){
 	},[Focus]);
 
 	return(
-		<div className = {cn("resume -grid")}>
+		<div className = {cn("resume_cont -grid")}>
 			<div className = {"filler"}></div>
 			<div className = {cn("skillsBox -smallPortrait -grid")}>
 				    <div className = {cn("slider")}>

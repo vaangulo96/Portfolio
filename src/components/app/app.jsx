@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react';
 import './app.css';
 import Projects from '../projects/projects';
-import Resume from '../resume/resume';
 import BackDrop from '../orangeBackDrop/backDrop';
 import ImgDemo from '../rImage-demo/img-demo';
 import BackUp from '../backUpBtn/backUp';

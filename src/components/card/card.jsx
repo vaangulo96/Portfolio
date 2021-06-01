@@ -15,6 +15,7 @@ const Card = (props)=>{
 
 	useEffect(()=>{
 		let body = document.querySelector('.App');
+		// eslint-disable-next-line
 		let card = document.querySelector('.cardText');
 		/*
 		if(body.scrollTop >= 250){

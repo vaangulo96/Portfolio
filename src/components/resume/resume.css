@@ -1,12 +1,5 @@
 
-/***grid class only sets the display,row,col props of a grid. 
- * Here resume class corresponds to  the grid-container.
- *
- * --baseGrey is defined in src/index.css
- * --highlight color should be moved?
- * need to use css variables to make better use of media queries
- ***/
-
+/***resume class ->grid-container && baseGrey in src/index***/
 .resume{
 	--colCount: 1;
 	--rowCount: 3;

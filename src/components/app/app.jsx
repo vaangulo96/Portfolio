@@ -55,9 +55,6 @@ function App() {
 	</div>
       </div>
       <BackUp />
-      <section id={'resume'}>
-        <Resume />
-      </section>
       <section id = {'projects'}>	  
 	<Projects />
       </section>

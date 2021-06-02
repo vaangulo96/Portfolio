@@ -40,7 +40,14 @@ export default function  BackUp (){
 	}
 
 	useEffect(()=>{
-		window.addEventListener("scroll",handleScroll);
+		let mobile = window.screen.width <= 800?true:false;
+		let Btn = document.getElementsByClassName('backUp')[0];
+		if (mobile === true){
+			Btn.style.visibility = "visible";
+			window.addEventListener("scroll",handleScroll);
+		}else{
+			Btn.style.visibility = "hidden"};
+
 	},[lastPos]);
 
 	return(

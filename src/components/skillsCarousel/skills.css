@@ -1,0 +1,169 @@
+.skills_cont{
+	display:flex;
+	height:100vw;
+	width:100vw;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+}
+
+
+.skillsBox{                                         
+        background-color: var(--hiliBlue);          
+	border: var(--border) solid var(--hiliPink);
+        border-radius:25%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;                       
+	position:relative;                      
+	width:25vw;                               
+	height:90vw;                           
+	transform:rotate(90deg);                  
+}
+
+.slider{                                       
+	height:90%;                             
+	width:100%;                           
+	/*overflow-y:hidden;  */                                                                        
+	/*scroll-snap-type:x mandatory;*/       
+	display: flex;                      
+	flex-flow:column;                    
+	align-items: center;                  
+	justify-content: center;            
+	border: var(--border) solid white;  
+	--shadow:rgba(255,41,213,0.41);      
+	--color: rgba(255,41,213,0.95);   
+	--contrast: rgba(188,248,255,0.98);
+	box-shadow:0px 5px 43px 21px var(--shadow), 
+		0px 5px 14px 0px var(--color),   
+		inset 0px 5px 21px 0px var(--color),
+		0px 1px 3px 4px var(--contrast);   
+}
+
+.-s0{                                              
+	z-index:2;                           
+	height: 18vw;                        
+	width: 18vw;                          
+	top:0vw;                                    
+}                                                                                                          
+.-s1{                                          
+	z-index:3;                                 
+	height:24vw;                           
+	width:30vw;                           
+	top:31vw;                                    
+}                                                                                                          
+.-s2{                                           
+	z-index:2;                             
+	height:18vw;                            
+	width:18vw;                              
+	top:63vw;                                    
+}
+
+.-s3{                                             
+	z-index:0;                              
+	height:13vw;                         
+	width:12vw;                              
+	top:54vw;                                 
+	left:2vw;                                    
+}                                                                                                          
+.-s4{                                           
+	z-index:0;                             
+	height:13vw;                           
+	width:12vw;                                
+	left:2vw;                                  
+	top:20vw;                                    
+}
+
+.square{                                         
+	color:var(--hiliPink);                 
+	background-color:black;               
+	border:2px solid;                     
+	border-radius:25%;                    
+	display:flex;                           
+	flex-flow:column nowrap;               
+	justify-content:center;                
+	align-items:center;                    
+	position: absolute;                                                                                
+}
+
+.Logo{                                           
+	position: relative;                          
+}                                                                                                                                                                
+@media screen and (max-width:800px){                                                                     
+	.square{                                
+		transform:rotate(-90deg);     
+	}  
+
+	.react{                                     
+		height:100%;                      
+		width:150%;             
+	}
+
+	.html5{                                  
+		height:70%;                        
+		width:90%;                    
+	}                                     
+
+	.css3{                    
+		height:90%;                        
+		width:80%;                          
+		top:2vw;                     
+	}                               
+
+	.js6{                       
+		height:75%;             
+		width:80%                      
+	}                             
+
+	.git{                           
+		height:75%;                        
+		width:80%;                    
+	}
+}
+
+@media screen and (min-width:800px){              
+	.skillsBox{                               
+		transform:rotate(0deg);   
+		grid-area:left;           
+		width:15vw;                   
+		height:50vh;                      
+		border-radius: 15%;
+		top:10vh;                             
+		left: 4vw;                    
+	}                                         
+
+	.slider{                         
+		height:90%;                       
+		width:95%;
+		overflow-x:hidden;                 
+		overflow-y:auto;                  
+		scroll-snap-type: y mandatory;
+	}
+
+	.square{                                   
+		height:50%;                     
+		width:100%;                
+	}
+	
+	.react{
+		height:95%;
+	}
+
+	.html5{                                    
+		height:65%;
+	}                                      
+
+	.css3{
+		height:65%;                        
+	}
+
+	.js6{
+		height:65%;
+	}
+
+	.git{
+		height:65%;
+	}
+}
+

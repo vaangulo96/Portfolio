@@ -2,6 +2,7 @@ import React,{useEffect} from 'react';
 import './app.css';
 import Projects from '../projects/projects';
 import BackDrop from '../orangeBackDrop/backDrop';
+import Skills from '../skillsCarousel/skills';
 import ImgDemo from '../rImage-demo/img-demo';
 import BackUp from '../backUpBtn/backUp';
 import LandingPage from '../landingP/landing';
@@ -44,20 +45,31 @@ function App() {
     <div className = "veil">
      <LandingPage />
     </div>
+
     <div className = "App">
       <div className = "App-header">
+
 	<div className = "backdrop">
 	   <BackDrop />
 	</div>
+
         <div className = "sunset-pic">
 	  <ResImg name="sunset" path={sunset} altText="cali sunset"/>
 	</div>
       </div>
+
       <BackUp />
+
+      <section id = {'resume'}>
+	  <Skills />
+      </section>
+
       <section id = {'projects'}>	  
 	<Projects />
       </section>
+
       <ImgDemo />
+
       <footer id={'bottom'}>
 	  <a href= "https://www.netlify.com/"><h3>powered by netlify
 	  </h3></a>

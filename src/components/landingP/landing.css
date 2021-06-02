@@ -58,7 +58,7 @@ body{
 }
 
 ._c2a:hover{
-	opacity:50%;
+	opacity:90%;
 	color:white;
 }
 
@@ -87,7 +87,7 @@ body{
 
 
 
-@media screen and (min-width:750px){
+@media screen and (min-width:800px){
 
 	#waterfront{
 		border:2px solid #00f7b3;
@@ -102,14 +102,19 @@ body{
 		font-size: 2em;
 		width:20vw;
 		height:20vh;
+		left:27vw;
+		top: -5vh;
+		grid-area:center;
 	}
 
 	.contact-me{
-		top:-15vh
+		margin:-15vw;
+
 	}
 
 	.my-stuff{
-		bottom:-10vh
+		bottom:0vh;
+		margin:10vw;
 	}
 
 }

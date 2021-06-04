@@ -51,15 +51,11 @@ body{
 	grid-area: bottom;
 	border: 1px solid #00f7b3;
 	border-radius: 15%;
-	box-shadow:0px 5px 43px 21px var(--shadow),
-		   0px 5px 14px 0px var(--color),
-		   inset 0px 5px 21px 0px var(--color),
-		   0px 1px 3px 4px var(--contrast);
 }
 
 ._c2a:hover{
-	opacity:90%;
 	color:white;
+	box-shadow:0px 5px 43px 21px var(--shadow),                                                                  0px 5px 14px 0px var(--color),                   inset 0px 5px 21px 0px var(--color),                                                              0px 1px 3px 4px var(--contrast);
 }
 
 ._c2a:active{
@@ -102,7 +98,7 @@ body{
 		font-size: 2em;
 		width:20vw;
 		height:20vh;
-		left:27vw;
+		left:20vw;
 		top: -5vh;
 		grid-area:center;
 	}

@@ -4,12 +4,12 @@ function unify(e){
 	return e.touches?e.touches[0]:e
 }
 
+//eslint-disable-next-line
 function animate2({els,timing,draw,duration}){
 	let start = performance.now();
 	requestAnimationFrame(function animate(time){
 		let timeFraction = (time -start)/duration;
 		timeFraction = timeFraction>1?1:timeFraction;
-		let progress = timing(timeFraction);
 		els.map((current,indx)=>draw(current,timeFraction));
 		if (timeFraction<1){
 			requestAnimationFrame(animate);
@@ -32,6 +32,7 @@ function animate({els,draw,duration,timeFunct=null}){
 	});
 }
 
+//eslint-disable-next-line
 function linear(timeFraction){
 	return timeFraction
 }
@@ -40,6 +41,7 @@ function arc(timeFraction){
 	return 1 - Math.sin(Math.acos(timeFraction));
 }
 
+//eslint-disable-next-line
 function easeOut(timing,timeFraction){
 	return 1 - timing(1 - timeFraction);
 }

@@ -1,5 +1,4 @@
-import React,{useEffect,useState} from 'react';
-import throttle from '../tools/throttle.js';
+import React,{useEffect,useState,useCallback} from 'react';
 import './backUp.css';
 import * as cn from 'classnames';
 
@@ -9,6 +8,7 @@ export default function  BackUp (){
 	const [isHidden,setHidden] = useState(true);
 	const [lastScroll, setScroll] = useState(0);
 
+	//eslint-disable-next-line
 	const debounce = (func,e) =>{
 		let pos = window.scrollY;
 		let deltY = pos - lastPos;
@@ -39,16 +39,20 @@ export default function  BackUp (){
 		setPos(pos);
 	}
 
+	const Scroll = useCallback(debounce(handleScroll));
+
+
+
 	useEffect(()=>{
 		let mobile = window.screen.width <= 800?true:false;
 		let Btn = document.getElementsByClassName('backUp')[0];
 		if (mobile === true){
 			Btn.style.visibility = "visible";
-			window.addEventListener("scroll",handleScroll);
+			window.addEventListener("scroll",Scroll);
 		}else{
 			Btn.style.visibility = "hidden"};
 
-	},[lastPos]);
+	},[Scroll]);
 
 	return(
 		<button className = {cn('upArrow','backUp','__lb__hl','hidden')}>

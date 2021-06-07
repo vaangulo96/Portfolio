@@ -1,6 +1,5 @@
 import React from 'react';
 import './img.css';
-import sunset from '../../images/sunset.jpg';
 
 const  ResImage =(props)=>{
 

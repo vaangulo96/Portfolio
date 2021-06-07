@@ -126,11 +126,10 @@
 	.skillsBox{                               
 		transform:rotate(0deg);   
 		grid-area:left;           
-		width:15vw;                   
-		height:50vh;                      
-		border-radius: 15%;
-		top:10vh;                             
-		left: 4vw;                    
+		width:25vw;                   
+		height:35vh;                    
+		border-radius: 15%;     
+		left: -10vw;
 	}                                         
 
 	.slider{                         

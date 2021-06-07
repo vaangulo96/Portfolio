@@ -1,10 +1,9 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import * as cn from  'classnames';
 import './projects.css';
 import '../../utils/colors.css';
 import '../../utils/flex.css';
 import '../../utils/layout.css';
-import ResImg from '../resImg/img';
 import {animate} from '../tools/helpers.js';
 
 function Projects(){
@@ -14,7 +13,7 @@ function Projects(){
 	const animScrlDn = (el,timeF) =>{
 		el.style.top = topPos - 10*timeF;
 	}
-
+//eslint-disable-next-line
 	const handleScrollDown =(box)=>{
 		animate({
 			els:[box],
